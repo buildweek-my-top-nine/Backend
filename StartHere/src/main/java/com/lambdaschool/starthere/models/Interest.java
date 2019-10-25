@@ -24,7 +24,7 @@ public class Interest extends Auditable
 
     private String description;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER) // <-- added for testing
     @JsonIgnoreProperties(value = {
             "interest"
     })
